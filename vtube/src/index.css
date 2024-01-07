@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Sidebar {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  background: #2d445d;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+  
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  /* background-color: cadetblue; */
+  /* border: 1px solid black; */
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #3b627a;
+}
+
+.SidebarList #active {
+  background-color: #3b627a;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.SidebarIcon {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.SidebarIcon img {
+  width: 100px;
+}
+
+.SidebarIcon p {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+/* サイドバーが開いている状態 */
+.Sidebar.open {
+  transform: translateX(0%);
+}
+
+/* サイドバーが閉じている状態 */
+.Sidebar.closed {
+  transform: translateX(-100%);
+}
+/* ボタンのスタイル */
+/* ボタンのスタイル */
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+/* ハンバーガーメニューの線のスタイル */
+.hamburger-line {
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* メニューが開いている時のアニメーション */
+.top-bun {
+  transform: rotate(-45deg) translate(-10px, -10px);
+}
+
+.bottom-bun {
+  transform: rotate(45deg) translate(-10px, 10px);
+}
+.hidden {
+  opacity: 0;
+}
+/*横ならべにする！*/
+.app-container {
+  display: flex;
+}

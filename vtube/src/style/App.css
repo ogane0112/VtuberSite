@@ -1,0 +1,14 @@
+.App{
+    display: flex;
+}
+.link {
+  color: #ffffff; /* Default color for link */
+  text-decoration: none; /* Removes underline from all links */
+  /* Add more styling as needed */
+}
+
+.active-link {
+  color: #4CAF50; /* Color for active link */
+  font-weight: bold;
+  /* Add more styling for active link */
+}

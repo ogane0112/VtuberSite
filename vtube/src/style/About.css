@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    color: #383e45;
+    font-size: 0.9rem;
+}
+a {
+    text-decoration: none;
+    /*横書きにするための奴*/
+    writing-mode: horizontal-tb;
+
+}
+
+img {
+    max-width :100%
+}
+li {
+    list-style: none;
+    writing-mode: horizontal-tb;
+}
+.style-title {
+    width: 120px;
+    line-height: 1px;
+    /*上下に10px　左右に0pxの余白が作成される*/
+    padding: 10px 0;
+}
+/*aタグのリンク範囲を親要素の範囲いっぱいに広げる*/
+
+.style-title a {
+    /*リンクをクリックしやすくする*/
+    display: block;
+}
+/*h2用のタグ*/
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+/*h3用のタグ*/
+.content-title {
+    font-size:2rem;
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: visible;
+}
+/*headerの画面最大幅を指定する*/
+.wrapper {
+    max-width: 960px;
+    margin:0 auto 100px auto;
+    padding:0 4%;
+    text-align: center;
+}
+/*ヘッダーのスタイルを指定*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+#header ul{
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    margin-left: 130px;
+    font-size: 50px;
+}
+#header li a {
+    color: #24292e;
+  }
+#header li a:hover {
+    color:aquamarine;
+    font-weight: bold;
+  }
+#header img{
+    width:30%;
+    height:100px;
+}
+#visual {
+    margin-bottom: 80px;
+  }
+/*visualのスタイルを設定*/
+#visual img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+}
+.content-small {
+    margin-left: 40%;
+}
+
+@media screen and (max-width :768px) {
+    /*header部分のレスポンシブ対応*/
+    /*ヘッダーのスタイルを指定*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+#header ul{
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    padding:10px;
+    margin-left:6%;
+    border: 1px solid black; 
+    border-radius:15%
+}
+#header li a {
+    color: #24292e;
+  }
+#header li a:hover {
+    color:aquamarine;
+    opacity: 0.7;
+  }
+#header img{
+    width:25%;
+    height:15%;
+}
+    /*-------------------------------------------
+    Mainvisualのレスポンシブ対応
+    -------------------------------------------*/
+        /*h3用のタグ*/
+    .content-title {
+        font-size:0.7rem;
+        margin: 10px 0;
+    }
+    #mainvisual img {
+      height: calc(100vh - 150px);
+    }
+     /*aboutのぶぶんのレスポンシブ対応*/
+     #about .content{
+        /*縦書きにする*/
+        flex-direction: column;
+    }
+    #about img{
+        margin-right:0;
+    }
+    /*loveの部分のレスポンシブ対応*/
+    #love ul{
+        flex-direction: column;
+    }
+    #love li{
+        width:100%;
+        margin-bottom:30px;
+    }
+    .content-small {
+        margin-left: 20%; /* Sidebarの幅に応じて調整 */
+      }
+  }
+/* Aboutセクションのコンテンツを中央に配置 */
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Loveセクションのアイテムを中央に配置 */
+  #love ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  #love li {
+    width: 32%;
+    margin: 0 10px;
+  }
+ 
+
+   
+
+  
+  
